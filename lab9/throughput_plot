@@ -1,0 +1,8 @@
+#!/usr/bin/gnuplot --persist
+
+set terminal png crop
+set output 'throughput.png'
+set xlabel "Time (seconds)"
+set ylabel "Throughput (Mbps)"
+set grid
+plot "throughput.json" using 1:7 with lines title 'Throughput'
